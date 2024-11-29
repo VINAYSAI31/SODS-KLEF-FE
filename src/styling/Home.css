@@ -1,0 +1,159 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --primary: #4294E3;
+  --secondary: #8F12FD;
+  --light: #F0F6FF;
+  --dark: #262B47;
+}
+
+
+/* Body */
+body {
+  font-family: 'Roboto', sans-serif;
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+
+/* Hero Section */
+.hero-section {
+  
+  background: linear-gradient(to right, #f0f4f8, #e1f5fe);
+  text-align: center;
+  padding: 30px 20px;
+  min-height: 5vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+.hero-content {
+  
+  margin: 0 auto;
+  position: relative;
+  right:300px;
+  top:30px;
+  
+}
+
+
+/* Styling for h1 Tag */
+.hero-content h3 {
+    font-size: 3rem; /* Increase font size */
+    margin: 20px 0;
+    color: #2c3e50; /* Darker shade for better contrast */
+    text-transform: uppercase; /* All caps for a bold look */
+    letter-spacing: 1px; /* Space out letters */
+    font-weight: 600; /* Make text bold */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    position: relative;
+    bottom:60px;
+    right: 60px;
+  }
+  
+  /* Styling for p Tag */
+  .hero-content p {
+    font-size: 1.25rem; /* Increase font size for readability */
+    color: #7f8c8d; /* Soft gray color for readability */
+    margin-bottom: 30px;
+    line-height: 1.8; /* Increase line spacing */
+    max-width: 450px; /* Limit width for better focus */
+    margin: 0 auto 30px; /* Center the text */
+    position: relative;
+    top:-55px;
+    right: 250px;
+  }
+  .hero-content h6 {
+    font-size: 1.25rem; /* Increase font size for readability */
+    color: #7f8c8d; /* Soft gray color for readability */
+    margin-bottom: 30px;
+    line-height: 1.8; /* Increase line spacing */
+    max-width: 450px; /* Limit width for better focus */
+    margin: 0 auto 30px; /* Center the text */
+    position: relative;
+    top:-55px;
+    right: 100px;
+  }
+  
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.cta-btn {
+  padding: 15px 30px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: all 0.3s;
+  position: relative;
+  left: -160px;
+bottom:40px;
+}
+
+.primary-btn {
+  background-color: #3498db;
+  color: white;
+}
+
+.primary-btn:hover {
+  background-color: #2980b9;
+}
+
+.secondary-btn {
+  background-color: white;
+  color: #3498db;
+  border: 1px solid #3498db;
+}
+
+.secondary-btn:hover {
+  background-color: #3498db;
+  color: white;
+}
+
+.info-image img {
+    max-width: 42%;
+    height: auto;
+    animation: dance 1s ease-in-out infinite;
+    position: relative;
+    bottom: 404px;
+    left: 700px;
+}
+
+@keyframes dance {
+    0%, 100% {
+        transform: translateY(0); /* Initial and end position */
+    }
+    50% {
+        transform: translateY(-10px); /* Move up by 10px at halfway */
+    }
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none; /* Hide the links in mobile view */
+  }
+
+  .auth-buttons {
+    gap: 10px;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .cta-btn {
+    font-size: 0.9rem;
+    padding: 10px 20px;
+  }
+}

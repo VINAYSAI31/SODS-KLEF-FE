@@ -1,0 +1,81 @@
+.back {
+
+  background-image: url('aboutbag.png');  
+   
+}
+
+.about-us-container {
+  font-family: 'Arial', sans-serif;
+  margin: 0 auto;
+  max-width: 1000px;
+  padding: 20px;
+  text-align: center;
+}
+
+.about-us-header {
+  margin-bottom: 30px;
+}
+
+.about-us-header h1 {
+  color: #2d87ff;
+  font-size: 2.5rem;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.card {
+  background-color: #f9f9f9;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 300px;
+  text-align: left;
+}
+
+.card h2 {
+  color: #ff6f61;
+  margin-bottom: 10px;
+}
+
+.card ul {
+  list-style: disc;
+  padding-left: 20px;
+}
+
+.card p, .card ul {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+.join-us-card {
+  background-color: #2d87ff;
+  color: white;
+  text-align: center;
+}
+
+.join-us-card button {
+  background-color: white;
+  color: #2d87ff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.join-us-card button:hover {
+  background-color: #e0e0e0;
+}
+
+.about-us-footer {
+  margin-top: 40px;
+  color: #888;
+  font-size: 0.9rem;
+}
