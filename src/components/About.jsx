@@ -1,5 +1,6 @@
 import { Target, Lightbulb, Users } from 'lucide-react';
 import { FaPython, FaReact, FaDatabase, FaNodeJs } from 'react-icons/fa';
+
 import Navbar from './Navbar';
 import Footer from './Footer';
 
@@ -24,10 +25,10 @@ const About = () => {
 
   const leaders = [
     {
-      name: 'Sarah Chen',
-      role: 'President',
-      image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=400',
-      bio: 'Graduate student in Data Science with a focus on ML applications.',
+      name: 'Dr. Nilu Singh',
+      role: 'Faculty In Charge',
+      image: './images/mam.jsp',
+      bio: 'Passionate about mentoring students in research and hands-on projects',
     },
  
   ];
@@ -80,8 +81,24 @@ const About = () => {
     <>
       <Navbar />
       <div className="bg-white">
+      <section className="relative py-20 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-50 to-indigo-50" />
+        <div className="absolute inset-0 bg-grid-slate-100 [mask-image:linear-gradient(0deg,white,rgba(255,255,255,0.6))]" />
+        <div className="container relative mx-auto px-4">
+          <div className="text-center max-w-3xl mx-auto">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+              About SODS-KLEF
+            </h1>
+            <p className="text-xl text-gray-600 mb-8">
+              Empowering the next generation of data scientists through innovation, education, and collaboration.
+            </p>
+           
+          </div>
+        </div>
+      </section>
+
         {/* Values Section */}
-        <section className="py-16 bg-gradient-to-b from-indigo-50">
+        <section className="py-4 bg-gradient-to-b from-indigo-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
               Our Values
@@ -108,8 +125,8 @@ const About = () => {
 
         {/* Leadership Section */}
         <section className="py-16">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
+        <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
               Our Leadership
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -121,7 +138,7 @@ const About = () => {
                   <img
                     src={leader.image}
                     alt={leader.name}
-                    className="w-full h-64 object-cover"
+                    className="w-full h-65 object-cover"
                   />
                   <div className="p-6">
                     <h3 className="text-xl font-semibold text-gray-900">
