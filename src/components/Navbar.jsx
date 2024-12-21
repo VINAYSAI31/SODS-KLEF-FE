@@ -14,11 +14,14 @@ const Navbar = () => {
         <li><Link to="/projects">Projects</Link></li>
         <li><Link to="/team">Team</Link></li>
         <li><Link to="/gallery">Gallery</Link></li>
-        <li><Link to="/contact">Contact</Link></li>
+        <li>
+  <a href="/contact">Contact</a>
+</li>
+
       </ul>
       <div className="auth-buttons">
-        <Link to="/login" className="login-btn">Login</Link>
-        <a href="views/register.jsp" className="signup-btn">Sign Up</a>
+        
+        <a href="#" className="signup-btn">Admin</a>
       </div>
     </nav>
   );
