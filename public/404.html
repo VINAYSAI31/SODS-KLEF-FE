@@ -7,11 +7,17 @@
     <script>
       // You can add an option to reload the page or redirect to the home page.
       function goHome() {
-        window.location.replace("/"); // Redirect to the home page
+        window.location.replace("/");
+        sessionStorage.removeItem("formScriptLoaded");
+
+         // Redirect to the home page
       }
 
       function retryContact() {
-        window.location.replace("/contact"); // Retry opening the contact page
+        windows.location.reload();
+        window.location.replace("/contact");
+        sessionStorage.removeItem("formScriptLoaded");
+        // Retry opening the contact page
       }
     </script>
     <style>

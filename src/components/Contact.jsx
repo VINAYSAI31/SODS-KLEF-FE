@@ -4,6 +4,7 @@ import Navbar from "./Navbar";
 import Footer from "./Footer";
 
 const Contact = () => {
+
   useEffect(() => {
     // Check if the form script has already been loaded
     const alreadyLoaded = sessionStorage.getItem("formScriptLoaded");
@@ -34,7 +35,10 @@ const Contact = () => {
       sessionStorage.removeItem("formScriptLoaded");
       console.log("Contact page unmounted - formScriptLoaded set to false");
     };
-  }, []); // Empty dependency ensures this runs only once on mount
+  }, []); // Pass mountKey here to trigger useEffect when mountKey changes
+
+  // Update the mountKey whenever the component is mounted
+  // Empty dependency ensures this runs only once on mount
 
   return (
     <div className="min-h-screen bg-gray-50">
