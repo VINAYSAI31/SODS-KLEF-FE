@@ -3,6 +3,11 @@ import { Link } from 'react-router-dom';
 import '../styling/navbar.css';
 
 const Navbar = () => {
+  const handleContactClick = () => {
+    // Force page reload on contact link click
+    window.location.href = '/contact';
+  };
+
   return (
     <nav className="navbar">
       <img src="/images/sods.png" alt="SODS Club Logo" className="logo" />
@@ -14,13 +19,12 @@ const Navbar = () => {
         <li><Link to="/projects">Projects</Link></li>
         <li><Link to="/team">Team</Link></li>
         <li><Link to="/gallery">Gallery</Link></li>
+        {/* Handle Contact link click manually */}
         <li>
-  <a href="/contact">Contact</a>
-</li>
-
+          <Link to="#" onClick={handleContactClick}>Contact</Link>
+        </li>
       </ul>
       <div className="auth-buttons">
-        
         <a href="/" className="signup-btn">Admin</a>
       </div>
     </nav>
