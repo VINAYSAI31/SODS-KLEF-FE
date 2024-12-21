@@ -25,7 +25,7 @@ const Contact = () => {
 
     // Cleanup function to remove the script if the component unmounts
     return () => {
-      document.body.removeChild(script);
+      
       sessionStorage.removeItem("contactPageReloaded");
     };
   }, []); // Empty dependency array to run once on mount
