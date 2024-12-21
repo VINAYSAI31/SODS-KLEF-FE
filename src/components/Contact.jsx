@@ -29,9 +29,10 @@ const Contact = () => {
       console.error("Error loading form script");
     };
 
+    // Cleanup function: set formScriptLoaded to false on unmount
     return () => {
-      // Cleanup: Do not remove the script, let it persist for future visits
-      console.log("Contact page unmount - no script removal needed");
+      sessionStorage.setItem("formScriptLoaded", "false");
+      console.log("Contact page unmounted - formScriptLoaded set to false");
     };
   }, []); // Empty dependency ensures this runs only once on mount
 
