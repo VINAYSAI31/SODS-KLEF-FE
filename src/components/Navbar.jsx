@@ -21,7 +21,7 @@ const Navbar = () => {
       </ul>
       <div className="auth-buttons">
         
-        <a href="#" className="signup-btn">Admin</a>
+        <a href="/" className="signup-btn">Admin</a>
       </div>
     </nav>
   );

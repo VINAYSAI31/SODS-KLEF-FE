@@ -214,7 +214,7 @@ const Team = () => {
                 >
                   <img
                     src={member.image}
-                    alt={`Photo of ${member.name}`}
+                    alt={member.name}
                     className="w-full h-64 object-cover"
                   />
                   <div className="p-6">

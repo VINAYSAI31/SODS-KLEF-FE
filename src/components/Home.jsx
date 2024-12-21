@@ -4,14 +4,14 @@ import Footer from "./Footer";
 import CountUp from "react-countup";
 import { useEffect, useState } from "react";
 import {
-  ArrowRight,
+
   Calendar,
   Users,
   BookOpen,
   Award,
   Target,
   Rocket,
-  ChevronRight,
+  
 } from "lucide-react";
 
 const Home = () => {

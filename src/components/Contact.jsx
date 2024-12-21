@@ -2,10 +2,7 @@ import { useEffect } from "react";
 import {
   Mail,
   MapPin,
-  Github,
-  Linkedin,
-  Twitter,
-  Instagram,
+
 } from "lucide-react";
 import Navbar from "./Navbar";
 import Footer from "./Footer";

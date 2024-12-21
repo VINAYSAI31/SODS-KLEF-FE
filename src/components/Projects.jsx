@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
 import Navbar from './Navbar';
-import { Calendar, Users, Trophy, MapPin, Clock, X } from 'lucide-react';
+import {  Users } from 'lucide-react';
 
 const Projects = () => {
 

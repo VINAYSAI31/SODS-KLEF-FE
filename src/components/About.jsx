@@ -1,5 +1,5 @@
 import { Target, Lightbulb, Users } from 'lucide-react';
-import { FaPython, FaReact, FaDatabase, FaNodeJs,FaLaptopCode, FaChartLine, FaChartBar, FaCube, FaFire, FaMagic, FaMicrochip, FaTable } from 'react-icons/fa';
+import { FaPython, FaDatabase,FaLaptopCode, FaChartLine, FaChartBar, FaCube, FaFire, FaMagic, FaTable } from 'react-icons/fa';
 import { DiMysql, DiMongodb } from 'react-icons/di'; // Icons for MySQL and MongoDB
 import { SiPostgresql  } from 'react-icons/si';
 import { FaLinkedin } from 'react-icons/fa';
@@ -27,15 +27,7 @@ const About = () => {
     },
   ];
 
-  const leaders = [
-    {
-      name: 'Dr. Nilu Singh',
-      role: 'Faculty In Charge',
-      image: './images/mam.jsp',
-      bio: 'Passionate about mentoring students in research and hands-on projects',
-    },
- 
-  ];
+
 
   const techStacks = [
     {
