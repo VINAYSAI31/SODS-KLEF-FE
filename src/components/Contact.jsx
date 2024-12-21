@@ -5,43 +5,28 @@ import Footer from "./Footer";
 
 const Contact = () => {
   useEffect(() => {
-    // Check if we have already triggered the reload in this session
-    const alreadyReloaded = sessionStorage.getItem("contactPageReloaded");
-
-    if (!alreadyReloaded) {
-      // Mark that the page has been reloaded once
-      sessionStorage.setItem("contactPageReloaded", "true");
-
-      // Force page reload on the first visit to the Contact page
-      window.location.reload();
+    // Remove any existing form container (if the script didn't clean it up)
+    const existingForm = document.querySelector(".visme_d");
+    if (existingForm) {
+      existingForm.innerHTML = ""; // Clear the previous form content
     }
 
-    // Check if the script already exists
-    let existingScript = document.querySelector(
-      'script[src="https://static-bundles.visme.co/forms/vismeforms-embed.js"]'
-    );
+    // Dynamically inject the Visme script
+    const script = document.createElement("script");
+    script.src = "https://static-bundles.visme.co/forms/vismeforms-embed.js";
+    script.async = true;
+    document.body.appendChild(script);
 
-    if (!existingScript) {
-      // Append the script only if it doesn't already exist
-      const script = document.createElement("script");
-      script.src = "https://static-bundles.visme.co/forms/vismeforms-embed.js";
-      script.async = true;
-
-      document.body.appendChild(script);
-
-      // Cleanup function
-      return () => {
-        // If needed, you can remove the script on unmount
-        document.body.removeChild(script);
-        sessionStorage.removeItem("contactPageReloaded");
-      };
-    }
-
-    // If the script exists, just ensure it loads the form
+    // Cleanup to avoid duplicate scripts
     return () => {
-      sessionStorage.removeItem("contactPageReloaded");
+      const injectedScript = document.querySelector(
+        'script[src="https://static-bundles.visme.co/forms/vismeforms-embed.js"]'
+      );
+      if (injectedScript) {
+        document.body.removeChild(injectedScript);
+      }
     };
-  }, []); // Empty dependency array ensures it runs only on mount
+  }, []); // Runs every time the component is mounted
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -55,7 +40,7 @@ const Contact = () => {
               Have any questions? Reach out to us, and we will respond promptly!
             </h2>
 
-            {/* Visme Form will be loaded by the script */}
+            {/* Visme Form will be loaded dynamically */}
             <div
               className="visme_d"
               data-title="Blog Contact Form"
