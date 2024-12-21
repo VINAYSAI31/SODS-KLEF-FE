@@ -3,10 +3,7 @@ import { Link } from 'react-router-dom';
 import '../styling/navbar.css';
 
 const Navbar = () => {
-  const handleContactClick = (event) => {
-    event.preventDefault(); // Prevent React Router from handling this navigation
-    window.location.href = '/contact'; // Force full page reload
-  };
+
 
   return (
     <nav className="navbar">
@@ -22,7 +19,7 @@ const Navbar = () => {
 
         {/* Contact link */}
         <li>
-          <a href="/contact" onClick={handleContactClick}>Contact</a>
+          <a href="/contact" >Contact</a>
         </li>
       </ul>
       <div className="auth-buttons">

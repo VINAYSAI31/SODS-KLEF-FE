@@ -1,18 +1,17 @@
 import { useEffect } from "react";
-import {
-  Mail,
-  MapPin,
-
-} from "lucide-react";
+import { Mail, MapPin } from "lucide-react";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 
 const Contact = () => {
   useEffect(() => {
+    // Reload the page when this component is mounted
+    window.location.reload();
+
     const script = document.createElement("script");
     script.src = "https://static-bundles.visme.co/forms/vismeforms-embed.js";
     script.async = true;
-    
+
     // Append script to load form
     document.body.appendChild(script);
 
@@ -20,13 +19,11 @@ const Contact = () => {
     return () => {
       document.body.removeChild(script);
     };
-  }, []);
+  }, []); // The empty dependency array ensures it runs only once
 
   return (
     <div className="min-h-screen bg-gray-50">
       <Navbar />
-
-      {/* Contact Information */}
       <section className="py-12">
         <div className="container mx-auto px-4">
           <div>
@@ -34,7 +31,6 @@ const Contact = () => {
               Have any questions? Reach out to us, and we will respond promptly!
             </h2>
 
-            {/* Visme Form will be loaded by the script */}
             <div
               className="visme_d"
               data-title="Blog Contact Form"
@@ -45,7 +41,6 @@ const Contact = () => {
               data-form-id="107501"
             ></div>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
             <div className="p-6 flex items-center space-x-4 rounded-lg shadow-lg">
               <div className="w-12 h-12 rounded-lg bg-blue-50 flex items-center justify-center">
@@ -73,7 +68,6 @@ const Contact = () => {
               </div>
             </div>
 
-            {/* Telegram Group Link */}
             <div className="p-6 flex items-center space-x-4 rounded-lg shadow-lg">
               <div className="w-12 h-12 rounded-lg bg-blue-50 flex items-center justify-center">
                 <Mail className="h-6 w-6 text-blue-600" />
@@ -91,9 +85,6 @@ const Contact = () => {
               </div>
             </div>
           </div>
-
-          {/* Social Links */}
-          <div>{/* Visme Form Section */}</div>
         </div>
       </section>
 
