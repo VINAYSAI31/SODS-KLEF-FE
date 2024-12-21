@@ -1,10 +1,20 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Mail, MapPin } from "lucide-react";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 
 const Contact = () => {
+  const [isVisible, setIsVisible] = useState(true);
 
+  useEffect(() => {
+    // Set the message to disappear after 4 seconds
+    const timer = setTimeout(() => {
+      setIsVisible(false);
+    }, 2500); // 4 seconds
+
+    // Clean up the timer on component unmount
+    return () => clearTimeout(timer);
+  }, []);
   useEffect(() => {
     // Check if the form script has already been loaded
     const alreadyLoaded = sessionStorage.getItem("formScriptLoaded");
@@ -52,8 +62,15 @@ const Contact = () => {
             <h2 className="text-xl font-normal text-gray-700 mb-6 text-center">
               Have any questions? Reach out to us, and we will respond promptly!
             </h2>
+            {isVisible && (
+          <p className="text-center text-white bg-gradient-to-r from-teal-400 to-blue-600 p-6 rounded-3xl text-xl font-bold mb-6 shadow-xl animate-bounce transition-all duration-500 hover:scale-105">
+          🚀 Hold tight! We're loading something awesome for you...{" "}
+          <span role="img" aria-label="sparkles">✨</span>
+        </p>
+        
+        )}
 
-            {/* Visme Form will be loaded by the script */}
+            
             <div
               className="visme_d"
               data-title="Blog Contact Form"
