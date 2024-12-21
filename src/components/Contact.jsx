@@ -5,28 +5,28 @@ import Footer from "./Footer";
 
 const Contact = () => {
   useEffect(() => {
-    // Remove any existing form container (if the script didn't clean it up)
-    const existingForm = document.querySelector(".visme_d");
-    if (existingForm) {
-      existingForm.innerHTML = ""; // Clear the previous form content
+    // Check if the form has already been initialized
+    const formInitialized = localStorage.getItem("formInitialized");
+
+    if (!formInitialized) {
+      // Mark the form as initialized
+      localStorage.setItem("formInitialized", "true");
+
+      // Reload the page to ensure the form script loads correctly
+      window.location.reload();
+    } else {
+      // Load the form script on subsequent visits
+      const script = document.createElement("script");
+      script.src = "https://static-bundles.visme.co/forms/vismeforms-embed.js";
+      script.async = true;
+      document.body.appendChild(script);
     }
 
-    // Dynamically inject the Visme script
-    const script = document.createElement("script");
-    script.src = "https://static-bundles.visme.co/forms/vismeforms-embed.js";
-    script.async = true;
-    document.body.appendChild(script);
-
-    // Cleanup to avoid duplicate scripts
     return () => {
-      const injectedScript = document.querySelector(
-        'script[src="https://static-bundles.visme.co/forms/vismeforms-embed.js"]'
-      );
-      if (injectedScript) {
-        document.body.removeChild(injectedScript);
-      }
+      // Reset the form initialization flag on unmount
+      localStorage.removeItem("formInitialized");
     };
-  }, []); // Runs every time the component is mounted
+  }, []); // Empty dependency array ensures it runs only once on mount
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -40,7 +40,7 @@ const Contact = () => {
               Have any questions? Reach out to us, and we will respond promptly!
             </h2>
 
-            {/* Visme Form will be loaded dynamically */}
+            {/* Visme Form will be loaded by the script */}
             <div
               className="visme_d"
               data-title="Blog Contact Form"
