@@ -16,20 +16,24 @@ const Contact = () => {
       window.location.reload();
     }
 
-    const script = document.createElement("script");
-    script.src = "https://static-bundles.visme.co/forms/vismeforms-embed.js";
-    script.async = true;
+    // Check if the script already exists
+    const existingScript = document.querySelector(
+      'script[src="https://static-bundles.visme.co/forms/vismeforms-embed.js"]'
+    );
 
-    // Append script to load the form
-    document.body.appendChild(script);
+    if (!existingScript) {
+      // Append the script only if it doesn't already exist
+      const script = document.createElement("script");
+      script.src = "https://static-bundles.visme.co/forms/vismeforms-embed.js";
+      script.async = true;
+      document.body.appendChild(script);
+    }
 
-    // Cleanup function to remove the script if the component unmounts
+    // Cleanup function to reset session storage only
     return () => {
-      
       sessionStorage.removeItem("contactPageReloaded");
     };
-  }, []); // Empty dependency array to run once on mount
-  
+  }, []); // Empty dependency array ensures it runs only on mount
 
   return (
     <div className="min-h-screen bg-gray-50">
