@@ -17,7 +17,7 @@ const Contact = () => {
     }
 
     // Check if the script already exists
-    const existingScript = document.querySelector(
+    let existingScript = document.querySelector(
       'script[src="https://static-bundles.visme.co/forms/vismeforms-embed.js"]'
     );
 
@@ -26,10 +26,18 @@ const Contact = () => {
       const script = document.createElement("script");
       script.src = "https://static-bundles.visme.co/forms/vismeforms-embed.js";
       script.async = true;
+
       document.body.appendChild(script);
+
+      // Cleanup function
+      return () => {
+        // If needed, you can remove the script on unmount
+        document.body.removeChild(script);
+        sessionStorage.removeItem("contactPageReloaded");
+      };
     }
 
-    // Cleanup function to reset session storage only
+    // If the script exists, just ensure it loads the form
     return () => {
       sessionStorage.removeItem("contactPageReloaded");
     };
