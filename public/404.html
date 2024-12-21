@@ -3,13 +3,61 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>404 Page Not Found</title>
+    <title>Oops! Something went wrong</title>
     <script>
-      // This will redirect 404s to the index.html, letting React handle routing.
-      window.location.replace("/index.html");
+      // You can add an option to reload the page or redirect to the home page.
+      function goHome() {
+        window.location.replace("/"); // Redirect to the home page
+      }
+
+      function retryContact() {
+        window.location.replace("/contact"); // Retry opening the contact page
+      }
     </script>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        text-align: center;
+        background-color: #f7f7f7;
+      }
+
+      h1 {
+        font-size: 2rem;
+        color: #333;
+      }
+
+      p {
+        margin-top: 20px;
+        font-size: 1.1rem;
+        color: #555;
+      }
+
+      .btn {
+        margin-top: 20px;
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1rem;
+        transition: background-color 0.3s ease;
+      }
+
+      .btn:hover {
+        background-color: #0056b3;
+      }
+    </style>
   </head>
   <body>
-    <h1>Page Not Found</h1>
+    <h1>Oops! Something went wrong.</h1>
+    <p>We encountered an error while trying to load the contact page. Please try the following options:</p>
+    <button class="btn" onclick="goHome()">Go to Home Page</button>
+    <button class="btn" onclick="retryContact()">Retry Contact Page</button>
   </body>
 </html>

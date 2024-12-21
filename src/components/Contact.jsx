@@ -5,28 +5,35 @@ import Footer from "./Footer";
 
 const Contact = () => {
   useEffect(() => {
-    // Check if the form has already been initialized
-    const formInitialized = localStorage.getItem("formInitialized");
+    // Check if the form script has already been loaded
+    const alreadyLoaded = sessionStorage.getItem("formScriptLoaded");
 
-    if (!formInitialized) {
-      // Mark the form as initialized
-      localStorage.setItem("formInitialized", "true");
+    if (!alreadyLoaded) {
+      // Mark that the form script has been loaded for this session
+      sessionStorage.setItem("formScriptLoaded", "true");
 
-      // Reload the page to ensure the form script loads correctly
+      // Reload the page to ensure proper form rendering
       window.location.reload();
-    } else {
-      // Load the form script on subsequent visits
-      const script = document.createElement("script");
-      script.src = "https://static-bundles.visme.co/forms/vismeforms-embed.js";
-      script.async = true;
-      document.body.appendChild(script);
     }
 
-    return () => {
-      // Reset the form initialization flag on unmount
-      localStorage.removeItem("formInitialized");
+    const script = document.createElement("script");
+    script.src = "https://static-bundles.visme.co/forms/vismeforms-embed.js";
+    script.async = true;
+    document.body.appendChild(script);
+
+    script.onload = () => {
+      console.log("Form script loaded successfully");
     };
-  }, []); // Empty dependency array ensures it runs only once on mount
+
+    script.onerror = () => {
+      console.error("Error loading form script");
+    };
+
+    return () => {
+      // Cleanup: Do not remove the script, let it persist for future visits
+      console.log("Contact page unmount - no script removal needed");
+    };
+  }, []); // Empty dependency ensures this runs only once on mount
 
   return (
     <div className="min-h-screen bg-gray-50">
