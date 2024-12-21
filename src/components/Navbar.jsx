@@ -16,14 +16,13 @@ const Navbar = () => {
         <li><Link to="/projects">Projects</Link></li>
         <li><Link to="/team">Team</Link></li>
         <li><Link to="/gallery">Gallery</Link></li>
+        <li><Link to="/Contacf">Contact</Link></li>
 
         {/* Contact link */}
-        <li>
-          <a href="/contact" >Contact</a>
-        </li>
+       
       </ul>
       <div className="auth-buttons">
-        <a href="/" className="signup-btn">Admin</a>
+        <Link to="/" className="signup-btn">Admin</Link>
       </div>
     </nav>
   );
