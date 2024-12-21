@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom';
 import '../styling/navbar.css';
 
 const Navbar = () => {
-  // const handleContactClick = () => {
-  //   // Force page reload on contact link click
-  //   window.location.href = '/contact';
-  // };
+  const handleContactClick = (event) => {
+    event.preventDefault(); // Prevent React Router from handling this navigation
+    window.location.href = '/contact'; // Force full page reload
+  };
 
   return (
     <nav className="navbar">
@@ -19,13 +19,14 @@ const Navbar = () => {
         <li><Link to="/projects">Projects</Link></li>
         <li><Link to="/team">Team</Link></li>
         <li><Link to="/gallery">Gallery</Link></li>
-        {/* Handle Contact link click manually */}
+
+        {/* Contact link */}
         <li>
-          <Link to="/contact" >Contact</Link>
+          <a href="/contact" onClick={handleContactClick}>Contact</a>
         </li>
       </ul>
       <div className="auth-buttons">
-        <Link to="/" className="signup-btn">Admin</Link>
+        <a href="/" className="signup-btn">Admin</a>
       </div>
     </nav>
   );
