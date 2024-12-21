@@ -31,7 +31,7 @@ const Contact = () => {
 
     // Cleanup function: set formScriptLoaded to false on unmount
     return () => {
-      sessionStorage.setItem("formScriptLoaded", "false");
+      sessionStorage.removeItem("formScriptLoaded");
       console.log("Contact page unmounted - formScriptLoaded set to false");
     };
   }, []); // Empty dependency ensures this runs only once on mount
