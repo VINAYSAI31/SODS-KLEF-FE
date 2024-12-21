@@ -26,8 +26,9 @@ const Contact = () => {
       console.log("Form script loaded successfully");
     };
 
-    script.onerror = () => {
+    script.onerror = (e) => {
       console.error("Error loading form script");
+      console.log(e);
     };
 
     // Cleanup function: set formScriptLoaded to false on unmount
