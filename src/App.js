@@ -9,10 +9,14 @@ import Contact from './components/Contact';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Team from './components/Team';
 import Projects from './components/Projects';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 
 
 function App() {
   return (
+    
+    <>
+    <SpeedInsights />
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
@@ -27,6 +31,7 @@ function App() {
         <Route path="*" element={<div>Page Not Found</div>} />
       </Routes>
     </Router>
+    </>
   );
 }
 
