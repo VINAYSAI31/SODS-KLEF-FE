@@ -67,7 +67,7 @@ const Contact = () => {
               </>
             )}
             <p className="text-center text-lg font-semibold text-blue-600 mt-6">
-                  Submit your details now and prepare for something fun...!🤩
+                  Submit your details now and watch something fun...!🤩
                 </p>
 
             <div
