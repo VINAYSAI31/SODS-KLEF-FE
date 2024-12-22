@@ -69,7 +69,7 @@ const Projects = () => {
       status: 'In Progress',
       team: [
         { name: 'Triveni - 2200032292', linkedin: '' },
-        { name: 'ch.Rupesh - 2300031153', linkedin: '' }
+        { name: 'Ch.Rupesh - 2300031153', linkedin: '' }
       ],
       deadline: 'Feb 2025'
     },
