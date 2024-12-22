@@ -12,10 +12,22 @@ const Activities = () => {
       image: "./images/events/event1.jpg",
     },
     {
-      title: "Machine Learning Hackathon",
+      title: "Data Science with Excel",
       description:
-        "24-hour hackathon focused on solving real-world ML challenges.",
+        "Master data analysis techniques with Excel in this hands-on workshop for all skill levels.",
       image: "./images/events/event2.jpg",
+    },
+    {
+      title: "Visual Insights Using Jupyter",
+      description:
+        "Harness Jupyter to visualize and analyze data effectively.",
+      image: "./images/events/event3.jpg",
+    },
+    {
+      title: "DSQL Essentials",
+      description:
+        "Learn key DSQL skills for seamless data querying.",
+      image: "./images/events/event4.jpg",
     },
   ];
 

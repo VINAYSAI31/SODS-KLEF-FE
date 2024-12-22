@@ -169,7 +169,7 @@ const Contact = () => {
               <div>
                 <h3 className="font-semibold text-gray-900">Email</h3>
                 <a
-                  href="mailto:sods@kluniversity.in"
+                  href="mailto:datascience.sods@kluniveristy.in"
                   className="text-blue-600 hover:text-blue-700"
                 >
                   sods@kluniversity.in
