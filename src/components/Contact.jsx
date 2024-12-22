@@ -63,7 +63,19 @@ const Contact = () => {
                   <span className="loader"></span>
                 </div>
 
-                
+                <style jsx>{`
+        .loader {
+          color:rgb(29, 20, 155);
+          font-size: 45px;
+          text-indent: -9999em;
+          overflow: hidden;
+          width: 1em;
+          height: 1em;
+          border-radius: 50%;
+          position: relative;
+          transform: translateZ(0);
+          animation: mltShdSpin 1.7s infinite ease, round 1.7s infinite ease;
+        }`}</style>
               </>
             )}
             <p className="text-center text-lg font-semibold text-blue-600 mt-6">
