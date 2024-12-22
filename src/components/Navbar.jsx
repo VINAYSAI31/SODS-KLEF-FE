@@ -1,15 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../styling/navbar.css';
 
 const Navbar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
 
   return (
     <nav className="navbar">
       <img src="/images/sods.png" alt="SODS Club Logo" className="logo" />
 
-      <ul className="nav-links">
+      <button className="menu-toggle" onClick={toggleMenu}>
+        {isMenuOpen ? '✖' : '☰'}
+      </button>
+
+      <ul className={`nav-links ${isMenuOpen ? 'open' : ''}`}>
         <li><Link to="/">Home</Link></li>
         <li><Link to="/about">About</Link></li>
         <li><Link to="/activities">Activities</Link></li>
@@ -17,10 +25,8 @@ const Navbar = () => {
         <li><Link to="/team">Team</Link></li>
         <li><Link to="/gallery">Gallery</Link></li>
         <li><Link to="/contact">Contact</Link></li>
-
-        {/* Contact link */}
-       
       </ul>
+
       <div className="auth-buttons">
         <Link to="/" className="signup-btn">Admin</Link>
       </div>
