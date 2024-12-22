@@ -10,6 +10,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Team from './components/Team';
 import Projects from './components/Projects';
 import { SpeedInsights } from '@vercel/speed-insights/react';
+import { Analytics } from "@vercel/analytics/react"
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
     
     <>
     <SpeedInsights />
+    <Analytics />
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
