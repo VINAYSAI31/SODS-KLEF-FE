@@ -13,7 +13,7 @@ const Contact = () => {
     // Set the message to disappear after 4 seconds
     const timer = setTimeout(() => {
       setIsVisible(false);
-    }, 2500); // 4 seconds
+    }, 2100); // 4 seconds
 
     // Clean up the timer on component unmount
     return () => clearTimeout(timer);
