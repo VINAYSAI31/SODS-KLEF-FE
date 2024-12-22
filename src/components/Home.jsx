@@ -108,9 +108,9 @@ const Home = () => {
                 data science.
               </p>
 <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-  <button className="px-6 py-3 bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-transform duration-200">
+<a href="https://t.me/+D6MR2RJjIo4wZmQ9"> <button className="px-6 py-3 bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-transform duration-200">
     Join Now 
-  </button>
+  </button></a>
 
 </div>
 
@@ -205,9 +205,9 @@ const Home = () => {
           Be a part of SODS-KLEF and take your first step towards mastering data
           science and analytics.
         </p>
-        <button className="px-6 py-3 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition">
+        <a href="https://t.me/+D6MR2RJjIo4wZmQ9"><button className="px-6 py-3 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition">
           Join Now 
-        </button>
+        </button></a>
       </section>
       <Footer />
       <style jsx>{`

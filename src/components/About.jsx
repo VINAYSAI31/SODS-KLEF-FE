@@ -170,7 +170,7 @@ const About = () => {
           Her mentorship goes beyond the classroom, creating an environment where innovation thrives, and students gain invaluable skills for their careers in data science.
         </p>
         <a
-          href="https://www.linkedin.com/in/dr-nilu-singh" // Replace with actual LinkedIn URL
+          href="https://www.linkedin.com/in/dr-nilu-singh-ph-d-5989b6207/" // Replace with actual LinkedIn URL
           target="_blank"
           rel="noopener noreferrer"
           className="mt-6 inline-flex items-center text-indigo-600 font-semibold hover:text-indigo-800 transition-colors duration-200"

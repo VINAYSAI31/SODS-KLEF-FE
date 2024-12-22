@@ -5,66 +5,140 @@ const Projects = () => {
 
 
   const currentProjects = [
-    {
-      title: 'Network Traffic Anomaly Detection for Cybersecurity',
-      description: 'Use unsupervised learning techniques to find patterns in network traffic data and identify unusual behavior that might signal cybersecurity threats.',
-      status: 'In Progress',
-      team: [
-        { name: 'Pardhu Madhu', linkedin: 'https://linkedin.com/in/alicejohnson' },
-        { name: 'Hema Vardhan', linkedin: 'https://linkedin.com/in/bobsmith' },
-      ],
-      deadline: 'Feb 2025',
-    },
-    {
-      title: 'Crime Prediction Using Data Science',
-      description: 'Build predictive models using historical crime data and social factors to forecast future crime hotspots and assist law enforcement in proactive planning',
-      status: 'Ongoing',
-      team: [
-        { name: 'K.Kavya', linkedin: 'https://linkedin.com/in/charliebrown' },
-        { name: 'Rama Krishna', linkedin: 'https://linkedin.com/in/dianaprince' },
-      ],
-      deadline: 'Feb 2025',
-    },
-    {
-      title: 'Noisy Data Management in Environmental Monitoring',
-      description: 'Develop machine learning models that clean and process noisy or incomplete environmental data (air quality, water levels), improving the accuracy of pollution tracking.',
-      status: 'Planning',
-      team: [
-        { name: 'Shusmitha', linkedin: 'https://linkedin.com/in/ethanhunt' },
-        { name: 'Rohith', linkedin: 'https://linkedin.com/in/fionagallagher' },
-      ],
-      deadline: 'Feb 2025',
-    },
-    {
-      title: 'Automated Business Reporting with Data Visualization',
-      description: 'Investigate the effectiveness of advanced data visualization techniques in automating business reporting, making complex data more accessible for decision-making.',
-      status: 'Planning',
-      team: [
-        { name: 'UdaySri-2200032495', linkedin: 'https://linkedin.com/in/ethanhunt' },
-        { name: 'Bhavya-2300032288', linkedin: 'https://linkedin.com/in/fionagallagher' },
-      ],
-      deadline: 'Feb 2025',
-    },
-    {
-      title: 'Noisy Data Management in Environmental Monitoring',
-      description: 'Develop machine learning models that clean and process noisy or incomplete environmental data (air quality, water levels), improving the accuracy of pollution tracking.',
-      status: 'Planning',
-      team: [
-        { name: 'Shusmitha', linkedin: 'https://linkedin.com/in/ethanhunt' },
-        { name: 'Rohith', linkedin: 'https://linkedin.com/in/fionagallagher' },
-      ],
-      deadline: 'Feb 2025',
-    },
-    {
-      title: 'Noisy Data Management in Environmental Monitoring',
-      description: 'Develop machine learning models that clean and process noisy or incomplete environmental data (air quality, water levels), improving the accuracy of pollution tracking.',
-      status: 'Planning',
-      team: [
-        { name: 'Shusmitha', linkedin: 'https://linkedin.com/in/ethanhunt' },
-        { name: 'Rohith', linkedin: 'https://linkedin.com/in/fionagallagher' },
-      ],
-      deadline: 'Feb 2025',
-    },
+    
+      {
+        title: 'The Role of Big Data in Analyzing Climate Change Impacts on Agricultural Productivity',
+        description: '',
+        status: 'In Progress',
+        team: [
+          { name: 'Vaishnavi', linkedin: '' },
+          { name: 'Jayanith', linkedin: '' }
+        ],
+        deadline: ''
+      },
+      {
+        title: 'Anomaly Detection in Cybersecurity Using Network Traffic Data',
+        description: 'Use unsupervised learning techniques to find patterns in network traffic data and identify unusual behavior that might signal cybersecurity threats.',
+        status: 'In Progress',
+        team: [
+          { name: 'Pardhu Madhu', linkedin: '' },
+          { name: 'Hema Vardhan', linkedin: '' }
+        ],
+        deadline: ''
+      },
+      {
+        title: 'Developing Machine Learning Models for Automated Text Classification in Legal Documents',
+        description: '',
+        status: 'In Progress',
+        team: [
+          { name: 'M. Vidya', linkedin: '' },
+          { name: 'Bhagya Sri', linkedin: '' }
+        ],
+        deadline: ''
+      },
+      {
+        title: 'Crime Prediction Using Data Science',
+        description: 'Build predictive models using historical crime data and social factors to forecast future crime hotspots and assist law enforcement in proactive planning.',
+        status: 'In Progress',
+        team: [
+          { name: 'K. Kavya', linkedin: '' },
+          { name: 'C. Ramakrishna', linkedin: '' }
+        ],
+        deadline: ''
+      },
+      {
+        title: 'Noisy Data Management in Environmental Monitoring',
+        description: 'Develop machine learning models that clean and process noisy or incomplete environmental data (air quality, water levels), improving the accuracy of pollution tracking.',
+        status: 'In Progress',
+        team: [
+          { name: 'Shusmitha', linkedin: '' },
+          { name: 'Rohith', linkedin: '' }
+        ],
+        deadline: ''
+      },
+      {
+        title: 'Automated Business Reporting with Data Visualization',
+        description: 'Investigate the effectiveness of advanced data visualization techniques in automating business reporting, making complex data more accessible for decision-making.',
+        status: 'In Progress',
+        team: [
+          { name: 'Udaya Sri', linkedin: '' },
+          { name: 'Bhavya', linkedin: '' }
+        ],
+        deadline: ''
+      },
+      {
+        title: 'Healthcare Data Privacy Using Differential Privacy',
+        description: 'Apply data science techniques to protect patient privacy in healthcare systems by using differential privacy methods, ensuring that sensitive information is secure.',
+        status: 'In Progress',
+        team: [
+          { name: 'Triveni', linkedin: '' },
+          { name: 'Rupeesh', linkedin: '' }
+        ],
+        deadline: ''
+      },
+      {
+        title: 'Real-Time Data Analytics in Traffic Management',
+        description: 'Develop real-time analytics systems that use streaming data from traffic sensors to optimize traffic lights, reduce congestion, and improve overall urban mobility.',
+        status: 'In Progress',
+        team: [
+          { name: 'Sreeja', linkedin: '' },
+          { name: 'Siva Prasanna', linkedin: '' }
+        ],
+        deadline: ''
+      },
+      {
+        title: 'The Role of Data Science in Crime Prediction and Prevention Strategies',
+        description: '',
+        status: 'In Progress',
+        team: [
+          { name: 'Vishal', linkedin: '' },
+          { name: 'M. Tarun Shiva Kumar', linkedin: '' }
+        ],
+        deadline: ''
+      },
+      {
+        title: 'Automating Data Preprocessing in the Data Science Lifecycle',
+        description: 'Build automated tools that streamline data wrangling, cleaning, and feature selection processes, improving efficiency in the initial stages of the data science workflow.',
+        status: 'In Progress',
+        team: [
+          { name: 'Keerthana', linkedin: '' },
+          { name: 'B. Charan', linkedin: '' }
+        ],
+        deadline: ''
+      },
+      {
+        title: 'Investigating the Effectiveness of Data Visualization Techniques in Business Reporting',
+        description: '',
+        status: 'In Progress',
+        team: [
+          { name: 'Sahitya', linkedin: '' },
+          { name: 'M. Harsha Priya', linkedin: '' }
+        ],
+        deadline: ''
+      },
+      {
+        title: 'Investigating the Use of Big Data in Urban Planning and Smart City Development',
+        description: '',
+        status: 'In Progress',
+        team: [
+          { name: 'Roshitha', linkedin: '' },
+          { name: 'Sai Varshith', linkedin: '' }
+        ],
+        deadline: ''
+      },
+      {
+        title: 'Developing Models for Analyzing Financial Time Series Data for Investment Strategies',
+        description: '',
+        status: 'In Progress',
+        team: [
+          { name: 'V. Sai Priya', linkedin: '' },
+          { name: 'Buvana', linkedin: '' }
+        ],
+        deadline: ''
+      }
+    
+    
+    
   ];
 
   return (

@@ -185,7 +185,7 @@ const Contact = () => {
               <div>
                 <h3 className="font-semibold text-gray-900">Telegram Group</h3>
                 <a
-                  href="https://t.me/yourtelegramgroup"
+                  href="https://t.me/+D6MR2RJjIo4wZmQ9"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-blue-600 hover:text-blue-700"
