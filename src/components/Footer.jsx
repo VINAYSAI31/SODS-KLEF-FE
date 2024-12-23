@@ -58,7 +58,7 @@ const Footer = () => {
 
         {/* Footer Text */}
         <p className="mt-10 text-center text-gray-500 text-sm md:text-base">
-          &copy; {new Date().getFullYear()} School of SODS Club. All rights reserved.
+          &copy; {new Date().getFullYear()} SODS Club. All rights reserved.
         </p>
       </div>
     </footer>
