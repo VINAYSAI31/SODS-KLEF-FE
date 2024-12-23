@@ -82,7 +82,7 @@ const Team = () => {
     {
       name: 'Maguluri Triveni',
       role: 'Protocol Head',
-      bio: 'James manages the protocols for events and ensures all activities run according to the guidelines.',
+      bio: 'Triveni manages the protocols for events and ensures all activities run according to the guidelines.',
       image: './images/protocalhead.jpg',
       linkedin: 'https://www.linkedin.com/in/triveni-maguluri-31995528a/?originalSubdomain=in',
       email: '2200032292@kluniversity.in',
@@ -92,7 +92,7 @@ const Team = () => {
     {
       name: 'Veeram Sreeja',
       role: 'Research Lead',
-      bio: 'Mia leads the research team, driving innovation and analysis in the club’s research initiatives.',
+      bio: 'Sreeja leads the research team, driving innovation and analysis in the club’s research initiatives.',
       image: './images/researchlead.jpg',
       linkedin: 'https://www.linkedin.com/in/veeramreddy-sreeja-59b733285/',
       email: '2200030712@kluniversity.in',
