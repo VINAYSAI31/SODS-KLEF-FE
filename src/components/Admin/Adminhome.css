@@ -1,0 +1,105 @@
+/* Main Container */
+.admin-home {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  /* Main Content Area */
+  .main-content {
+    
+    
+  }
+  
+  /* Card Container */
+  .card-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex-grow: 1;
+    margin-left: 250px; /* Offset for Sidebar */
+    padding: 20px;
+    background-color: #f7f8fc;
+  }
+  
+  /* Top Card with Welcome & Search */
+  .top-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .top-card h2 {
+    font-size: 1.5rem;
+    color: #2c3e50;
+  }
+  
+  .top-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .search-bar {
+    display: flex;
+    align-items: center;
+    background-color: #f0f0f0;
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+  
+  .search-bar input {
+    border: none;
+    background: transparent;
+    outline: none;
+    padding: 5px;
+  }
+  
+  .search-bar i {
+    color: #888;
+  }
+  
+  .bell-icon {
+    font-size: 1.5rem;
+    color: #2c3e50;
+    cursor: pointer;
+  }
+  
+  /* Main Dashboard Card */
+  .main-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.2s ease;
+  }
+  
+  .main-card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #2c3e50;
+  }
+  
+  .main-card p {
+    font-size: 1rem;
+    color: #333;
+  }
+  
+  .button-primary {
+    background-color: #e74c3c;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .button-primary:hover {
+    background-color: #c0392b;
+  }
+  

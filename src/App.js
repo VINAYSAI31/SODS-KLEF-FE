@@ -11,6 +11,11 @@ import Team from './components/Team';
 import Projects from './components/Projects';
 import { SpeedInsights } from '@vercel/speed-insights/react';
 import { Analytics } from "@vercel/analytics/react"
+import Adminlogin from './components/Admin/Adminlogin';
+import Adminhome from './components/Admin/Adminhome';
+import AllProjects from './components/Admin/AllProjects';
+import AllActivities from './components/Admin/AllActivities';
+import TeamMembers from './components/Admin/TeamMembers';
 
 
 function App() {
@@ -31,6 +36,16 @@ function App() {
         <Route path="/contact" element={<Contact />}/>
         {/* Fallback for undefined routes */}
         <Route path="*" element={<div>Page Not Found</div>} />
+
+
+       {/*   admin */ }
+      <Route path="/adminlogin" element={<Adminlogin />}/>
+      <Route path='/adminhome' element={<Adminhome />}/>
+      <Route path='/allprojects' element={<AllProjects />}/>
+      <Route path='/addactivity' element={<AllActivities />}/>
+      <Route path='/teammembers' element={<TeamMembers />}/>
+      <Route path='/allactivities' element={<AllActivities />}/>
+
       </Routes>
     </Router>
     </>

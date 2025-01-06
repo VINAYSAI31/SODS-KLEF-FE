@@ -28,7 +28,7 @@ const Home = () => {
     // Hide the marquee message after 10 seconds
     const timer = setTimeout(() => {
       setShowMarquee(false); // Disable marquee after 10 seconds
-    }, 4000); // 10 seconds in milliseconds
+    },999999); // 10 seconds in milliseconds
 
     return () => {
       if (target) {
