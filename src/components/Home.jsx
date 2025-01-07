@@ -170,27 +170,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">Upcoming Events</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {upcomingEvents.map((event, index) => (
-              <div key={index} className="overflow-hidden rounded-lg shadow-lg hover:shadow-2xl">
-                <img src={event.image} alt={event.title} className="w-full h-48 object-cover" />
-                <div className="p-6">
-                  <div className="text-sm text-blue-600 mb-2">{event.date}</div>
-                  <h3 className="text-xl font-semibold mb-2">{event.title}</h3>
-                  <p className="text-gray-600 mb-4">{event.description}</p>
-                  <div className="flex items-center justify-between text-sm text-gray-500">
-                    <span>{event.instructor}</span>
-                    <span>{event.seats}</span>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+     
 
       <Footer />
       <style jsx>{`

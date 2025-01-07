@@ -8,27 +8,64 @@ const Activities = () => {
       title: "Data Science Workshop Series",
       description:
         "Hands-on workshop covering Python, pandas, and data visualization.",
-      image: "./images/events/event1.jpg",
+      image: "./images/events/event3.jpg",
     },
     {
       title: "Data Science with Excel",
       description:
         "Master data analysis techniques with Excel in this hands-on workshop for all skill levels.",
-      image: "./images/events/event2.jpg",
+      image: "./images/events/event5.jpg",
     },
     {
       title: "Visual Insights Using Jupyter",
       description:
         "Harness Jupyter to visualize and analyze data effectively.",
-      image: "./images/events/event3.jpg",
+      image: "./images/events/event4.jpg",
     },
     {
       title: "DSQL Essentials",
       description:
         "Learn key DSQL skills for seamless data querying.",
-      image: "./images/events/event4.jpg",
+      image: "./images/events/event8.jpg",
+    },
+    {
+      title: "AI-Powered Analytics",
+      description:
+        "Discover the power of AI in analytics and how it transforms decision-making.",
+      image: "./images/events/event9.jpg",
+    },
+    {
+      title: "Introduction to Machine Learning",
+      description:
+        "A beginner-friendly workshop on the fundamentals of machine learning.",
+      image: "./images/events/event6.jpg",
+    },
+    {
+      title: "Data Cleaning Bootcamp",
+      description:
+        "Learn best practices and techniques to clean and prepare data for analysis.",
+      image: "./images/events/event10.jpg",
+    },
+    {
+      title: "Storytelling with Data",
+      description:
+        "Master the art of communicating insights effectively through data visualization.",
+      image: "./images/events/event2.jpg",
+    },
+    {
+      title: "Advanced Python for Data Science",
+      description:
+        "Deep dive into Python for data manipulation, analysis, and automation.",
+      image: "./images/events/event1.jpg",
+    },
+    {
+      title: "Big Data Tools and Techniques",
+      description:
+        "Explore tools like Hadoop and Spark to analyze massive datasets.",
+      image: "./images/events/event7.jpg",
     },
   ];
+  
 
   return (
     <div className="back">
