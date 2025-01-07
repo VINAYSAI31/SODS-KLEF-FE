@@ -197,6 +197,7 @@ const Team = () => {
       name: 'Rama Krishna',
       role: 'Club Member',
       bio: 'Rama Krishna engages in brainstorming sessions and contributes to implementing innovative solutions for data-driven problems',
+      image: './images/second3.jpg',
       linkedin: 'https://linkedin.com/in/david-kumar',
       email: 'david@datasciclub.edu',
       github: 'https://github.com/david-kumar',
