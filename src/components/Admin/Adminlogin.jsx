@@ -4,7 +4,6 @@ import axios from 'axios';
 import { Shield, Key, User } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import Navbar from '../Navbar';
-import { Link } from "react-router-dom";
 
 const Adminlogin = () => {
   const navigate = useNavigate();
@@ -15,17 +14,35 @@ const Adminlogin = () => {
   } = useForm();
 
   // Function to handle form submission
+  const onSubmit = async (data) => {
+    try {
+      console.log(data);
+      const response = await axios.post('http://localhost:9092/api/admin/checkadmin', {
+        username: data.username,
+        password: data.password,
+      });
+      
+      if (response.data === true) {
+        navigate('/adminhome'); // Redirect on successful login
+      } else {
+        alert('Invalid username or password. Please try again.');
+      }
+    } catch (error) {
+      console.error('Login failed:', error);
+      alert('An error occurred while logging in. Please try again later.');
+    }
+  };
 
   return (
     <>
-      <Navbar/>
-      <div className="min-h-screen  flex items-center justify-center p-4">
+      <Navbar />
+      <div className="min-h-screen flex items-center justify-center p-4">
         <div className="background-pattern max-w-md w-full bg-white backdrop-blur-lg rounded-2xl p-8 shadow-2xl transform hover:scale-[1.02] transition-transform duration-300">
           <div className="flex justify-center mb-8">
             <Shield className="h-12 w-12 text-purple-700" />
           </div>
           <h2 className="text-3xl font-bold text-center text-black mb-8">Admin Portal</h2>
-          <form  className="space-y-6">
+          <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
             <div className="relative">
               <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-purple-700 h-5 w-5" />
               <input
@@ -50,12 +67,12 @@ const Adminlogin = () => {
                 <span className="error text-red-500">{errors.password.message}</span>
               )}
             </div>
-            <Link to='/adminhome'><button
+            <button
               type="submit"
               className="w-full bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-4 rounded-lg transition-colors duration-300"
             >
               Login as Administrator
-            </button></Link>
+            </button>
           </form>
           <p className="mt-4 text-center text-purple-400">
             Secure access for administrative controls
