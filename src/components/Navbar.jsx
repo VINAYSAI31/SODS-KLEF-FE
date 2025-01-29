@@ -28,7 +28,7 @@ const Navbar = () => {
       </ul>
 
       <div className="auth-buttons">
-        <Link to="https://sods-admin.vercel.app/" className="signup-btn">Admin</Link>
+        <Link  className="signup-btn">Admin</Link>
       </div>
     </nav>
   );
