@@ -11,10 +11,7 @@ import Team from './components/Team';
 import Projects from './components/Projects';
 import { SpeedInsights } from '@vercel/speed-insights/react';
 import { Analytics } from "@vercel/analytics/react"
-import Adminhome from './components/Admin/Adminhome';
-import AllProjects from './components/Admin/AllProjects';
-import AllActivities from './components/Admin/AllActivities';
-import TeamMembers from './components/Admin/TeamMembers';
+
 
 
 function App() {
@@ -38,12 +35,7 @@ function App() {
 
 
        {/*   admin */ }
-      <Route path="/adminlogin" element={<Adminlogin />}/>
-      <Route path='/adminhome' element={<Adminhome />}/>
-      <Route path='/allprojects' element={<AllProjects />}/>
-      <Route path='/addactivity' element={<AllActivities />}/>
-      <Route path='/teammembers' element={<TeamMembers />}/>
-      <Route path='/allactivities' element={<AllActivities />}/>
+      
 
       </Routes>
     </Router>
