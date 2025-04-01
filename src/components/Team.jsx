@@ -256,7 +256,7 @@ const Team = () => {
     {
       name: 'CHITTURI RUPESH  ',
       role: 'Member',
-      bio: 'Sreeja leads the research initiatives, focusing on data analysis and machine learning algorithms.',
+      bio: 'Rupesh leads the research initiatives, focusing on data analysis and machine learning algorithms.',
       image:'./images/second1.jpg',
       linkedin: 'https://linkedin.com/in/david-kumar',
       email: 'david@datasciclub.edu',
